@@ -15,21 +15,25 @@
         <h1>Welcome to my Phone Hunter Express</h1>
     </header>
 
-    <main>
+    <main class="container">
         <!-- display search result -->
-        <section class="container my-4">
+        <section class="my-4">
             <div class="mb-3 w-50 d-flex">
                 <input type="text" class="form-control me-2" id="search-field" placeholder="search your phone">
                 <button id="btn-search" class="btn btn-primary">Search</button>
             </div>
         </section>
         <!-- display phone -->
-        <section class="container">
+        <section class="">
             <div id="phones-container" class="row row-cols-1 row-cols-md-3 g-4">
 
             </div>
             <div id="no-found-phone" class="mt-4 d-none">
                 <h3 class="text-warning text-capitalize">No Phone Found. Please try a new phone search.</h3>
+            </div>
+            <!-- show more product -->
+            <div id="show-all-products" class="text-center my-4 d-none">
+                <button id="btn-show-all" class="btn btn-outline-info">Show More Products</button>
             </div>
         </section>
 
@@ -39,6 +43,27 @@
             <div style="height: 400px;" class="d-flex justify-content-center align-items-center">
                 <div class="spinner-border text-warning" role="status">
                     <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </section>
+        <!-- Modal Open -->
+        <section>
+            <!-- Modal -->
+            <div class="modal fade" id="phoneDetailModal" tabindex="-1" aria-labelledby="phoneDetailModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="phoneDetailModalLabel"></h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div id="phone-details" class="modal-body">
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
